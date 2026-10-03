@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>День учителя — пожелания</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #F1F1BF, #EADFCB, #B8543A);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #4A2C2A;
+      text-align: center;
+    }
+    .container {
+      background: #EADFCB;
+      padding: 40px 30px;
+      border-radius: 25px;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(156, 122, 102, 0.4);
+      border: 2px solid #9C7A66;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #B8543A;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+    }
+    #wish {
+      font-size: 20px;
+      margin: 30px 0;
+      min-height: 60px;
+      font-weight: bold;
+      color: #9C7A66;
+      font-style: italic;
+    }
+    button {
+      background: #B8543A;
+      color: #F1F1BF;
+      border: none;
+      padding: 15px 35px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Georgia', serif;
+      box-shadow: 0 4px 10px rgba(184, 84, 58, 0.4);
+    }
+    button:hover {
+      background: #9C7A66;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(156, 122, 102, 0.6);
+    }
+    .hint {
+      font-size: 14px;
+      color: #9C7A66;
+      margin-top: 20px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 С Днём учителя! 🎉</h1>
+    <p>Нажми на кнопку и получи пожелание:</p>
+    <div id="wish">...</div>
+    <button onclick="showWish()">Получить пожелание</button>
+    <p class="hint">Сделано с любовью для наших учителей ❤️</p>
+  </div>
+
+  <script>
+    const wishes = [
+      "Пусть каждый день будет добрым!",
+      "Спасибо за ваше терпение!",
+      "Вы — лучшие!",
+      "Пусть ученики радуют вас!",
+      "Здоровья и счастья!",
+      "Пусть вдохновение не покидает вас!",
+      "Спасибо за ваши знания!",
+      "Пусть каждый урок будет в радость!",
+      "Вы делаете мир лучше!",
+      "Пусть сбудется всё задуманное!"
+    ];
+
+    function showWish() {
+      const random = Math.floor(Math.random() * wishes.length);
+      document.getElementById('wish').textContent = wishes[random];
+    }
+  </script>
+</body>
+</html>
